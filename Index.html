@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Pixelify+Sans:wght@600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">SPS</div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    <nav class="nav nav--hidden">
+      <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="intro">
+      <h1>Welcome.</h1>
+      <p>Hi there! Welcome to my portfolio! Please have a look around to find out <a href="about.html"> more about me!</a></p>
+    </section>
+    
+    <aside class="contacts">
+      <h2>Contacts</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/shea-sexton/">LinkedIn</a></li>
+        <li><a href="https://www.syncera.uk">Biz Website</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Other projects -->
+      </ul>
+    </aside>
+  </main>
+  
+  <footer>
+    <p>©2023 Shea Sexton</p>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainContent = document.querySelector('main'); // Assuming your main content is within a <main> tag
+
+  
+    navToggle.addEventListener('click', function() {
+      nav.classList.toggle('nav--hidden');
+      // Toggle a class on the body to adjust the layout
+      mainContent.classList.toggle('main--expanded'); // Toggle a class on the main content
+    });
+  });</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Pixelify+Sans:wght@600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">SPS</div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    <nav class="nav nav--hidden">
+      <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    
+    <section class="projects">
+      <h1 class="ptitle" title="title">My Projects</h1>
+      <article class="project">
+          <h2>Responsive Web Design - Emerging Tech</h2>
+          <img src="cp.png" alt="Project 1 Image">
+          <p>This project I undertook in my first year of university. <br><br>
+          I was required to work in a team to create a website on the subject of our choice.
+          <br><br>I was responsible for creating an interactive Sitemap and gallery, this required Javascript, HTML, and CSS. <br><br>
+          Overall, I created a very responsive site utilising Javascript to change colours, display slideshows, take in user input,
+          and more. <br><br> I also used animations to make SVGs more dynamic on user action, and greatly developed my teamworking ability.
+
+         </p>
+          <time datetime="YYYY-MM-DD">2023-02-01</time>
+      </article>
+
+      <article class="project">
+        <a href="https://www.syncera.uk"><h2>Syncera - AI Automation Site</h2></a>
+        <img src="syncera.png" alt="Project 2 Image">
+        <p>Over the summer, I was responsible for creating a website for an AI Automation company. <br><br>
+        I spent a lot of time on the design and developed my skills in bringing a vision to life in web design. <br><br>
+        I utilised high level CSS, animations, Javascript for forms and user input, and carefully crafted the design and aesthetic of the site. </p>
+        <time datetime="YYYY-MM-DD">2023-06-15</time>
+    </article>
+
+    <article class="project">
+      <a href="https://www.krjestates.co.uk"><h2>KRJ Estates - Site Development</h2></a>
+      <img src="KRJ.png" alt="Project 3 Image">
+      <p>This project was paid work that I engaged in over the summer. <br><br>
+      I created a website for a property management company, and was responsible for the design and development of the site. <br><br>
+      I learned a lot about delivering for clients on a time limit and to a high standard, I developed my skills in web design through this project. 
+      </p>
+      <time datetime="YYYY-MM-DD">2023-07-20</time>
+  </article>
+      
+  </section>
+    
+    <aside class="contacts">
+      <h2>Contacts</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/shea-sexton/">LinkedIn</a></li>
+        <li><a href="https://www.syncera.uk">Biz Website</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Other projects -->
+      </ul>
+    </aside>
+  </main>
+  
+  <footer>
+    <p>©2023 Shea Sexton</p>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('.nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainContent = document.querySelector('main'); // Assuming your main content is within a <main> tag
+
+  
+    navToggle.addEventListener('click', function() {
+      nav.classList.toggle('nav--hidden');
+      // Toggle a class on the body to adjust the layout
+      mainContent.classList.toggle('main--expanded'); // Toggle a class on the main content
+    });
+  });</script>
+</body>
+</html>

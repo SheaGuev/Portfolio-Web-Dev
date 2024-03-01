@@ -1,0 +1,448 @@
+
+body {
+    font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+    /*font-family: 'Rajdhani', sans-serif; */
+    background: rgb(0,34,36);
+    background: linear-gradient(90deg, rgba(0,34,36,1) 0%, rgba(26,26,46,1) 55%, rgba(18,4,54,1) 100%);
+    color: white;
+    margin: 0;
+    align-items: center;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    padding: 1em;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Spread out logo and nav */
+   /* background-color: #232323;  */
+
+  }
+
+  .intro a{
+    color: aquamarine;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+
+  .intro a:hover{
+    color: #e94560;
+  }
+
+  
+  .logo {
+    font-size: 2em;
+    color: #e94560;
+  }
+  
+  nav {
+    font-size: 1.5em;
+    flex-grow: 1; /* Allow nav to take up the available space - needed to bring the nav items to center*/
+    display: flex;
+    justify-content: center; /* Center nav items */
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top; /* Ensure transformation starts from the top */
+   
+   
+  }
+
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    /*padding: .2;*/
+  }
+
+  nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Color of your links */
+    transition: color 0.3s; /* Transition for hover effect */
+  }
+  nav a:hover {
+    color: #e94560; /* Color when hovering over the links */
+  }
+  
+
+
+  nav li{
+    padding: 0 1em;
+    text-align: center; /* Center align the nav items */
+
+  }
+
+  .img_holder1{
+    display: flex;
+    justify-content: center; /* Center the image in the container */
+    align-items: center;
+    text-align: center;
+    border-radius: 250px;
+    margin: auto;
+    transform: scale(0.7);
+    
+    
+   
+  }
+  #me{
+    object-fit: cover; /* This ensures the image doesn't break its aspect ratio */
+    height: auto; /* This maintains the aspect ratio of the image */
+   /* margin-right: 20px; /* Adjust the spacing between the image and the text */
+    border-radius: 25%;
+    margin: auto;
+    
+    
+    max-width: 100%; /* however wide you want the image# */
+    
+    
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+    transition: margin-top 0.3s ease-in-out; /* Smooth transition for the shift */
+  }
+  
+  .intro h1 {
+    font-size: 4em;
+  }
+  
+  .intro p {
+    max-width: 70%;
+    line-height: 1.6;
+  }
+  
+  .contacts {
+    border-left: 2px solid #e94560; /* Add a border to the left of the contacts 
+    with a border radius to make it more stylish*/
+    border-radius: 30px;
+    padding-left: 2em;
+    margin-right: 4em;
+  }
+  
+  .contacts h2 {
+    color: #e94560;
+    margin-bottom: 0.5em;
+  }
+  
+  .contacts ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contacts ul li {
+    margin: 0.5em 0;
+  }
+
+  a[href="contact.html"]{
+    border-bottom: 2px solid #e945608a;
+    border-radius: 25%;
+  }
+
+  .contacts a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.6;
+    transition: color 0.3s;
+  }
+  .contacts a:hover{
+    color: #e94560;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 0.5em;
+    background-color: #1a1a2e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main--expanded {
+    margin-top: -5em; /* Adjust as needed to fill the space left by the nav */
+    transition: margin-top 0.3s ease-in-out; /* Smooth transition for the shift */
+  }
+
+
+  .nav-toggle{
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-top: 2em;
+    height: 100%;
+
+  }
+  /* Styles for the hamburger icon */
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    position: relative;
+    
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    left: 0;
+  }
+  
+  .hamburger::before {
+    top: -8px;
+  }
+  
+  .hamburger::after {
+    top: 8px;
+  }
+
+
+
+  /*Project Page*/
+/* Project Section */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px; /* so hover effect doesnt go off screen */
+  
+}
+
+
+h1[title]{
+  
+  font-size: 2em;
+  margin-left: 1em;
+  padding: 0;
+  margin-bottom: 1em;
+  color: #e94560;
+}
+
+.project {
+  margin: 20px;
+  padding: 15px;
+  padding-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  max-height: 100%;
+}
+
+.project:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+}
+
+.project a{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s; /*removing default link and adding transition*/
+}
+
+.project a:hover{
+  color: #e94560;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+article.project > img{
+  max-width: 76%;
+  height: auto;
+  margin: 5px 0;
+}
+
+time{
+  font-style: italic;
+  color: #e94560;
+}
+article:nth-of-type(1n):not(:last-of-type){ /*all articles bar the last will have a bottom border*/
+  border-bottom: 2px solid #e94560;
+}
+
+/*Project Page End*/
+
+/*Form Page*/
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Border box sizing */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); /* Inner shadow */
+}
+
+.form-group button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: #e94560;
+}
+
+input:valid { /* bg goes green when the input is valid */
+ 
+  background-color: rgb(165, 234, 213);
+
+}
+
+input:user-invalid{/* bg goes red when the user input is invalid */
+  background-color: rgb(234, 165, 165);
+}
+
+/* Form Page End */
+  
+  @media screen and (max-width: 768px) {
+    article:last-of-type{ /*when layout changes a border is added to the final article*/
+      border-bottom: 2px solid #e94560;
+    }
+    main {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    
+    .img_holder1{
+         
+      max-width: 50%;
+      
+    }
+
+    .contacts{
+        padding: 1em 1em;
+        margin-bottom: 2em;
+        text-align: center;
+        margin: auto;
+        margin-top: 2em;
+    }
+    
+    .intro p, .projects {
+      max-width: 100%;
+    }
+    .projects {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  }
+  H1[Title]{
+    text-align: center;
+    margin: 0; /* Adjusting the margin so that aligns in center when screen changes */
+  }
+  }
+  
+
+    /* Responsive design to ensure nav items stack vertically on smaller screens */
+    @media (max-width: 600px) {
+
+      
+
+        main{
+          
+          margin-top: -12em;
+          justify-content: center;
+        
+        }
+   
+        .nav--hidden {
+    transform: translateY(-150%);
+   }
+
+        .nav-toggle {
+            display: block; /* Show the toggle button */
+          }
+        
+        .intro{
+            text-align: center;
+            
+        }
+
+       
+       .contacts{
+        text-align: center;
+        margin: auto;
+        margin-top: 1em;
+       }
+
+        
+        header {
+          flex-direction: column;
+        }
+
+        .logo, nav {
+            flex-grow: 1; /* Prevent growth on small screens */
+            justify-content: center; /* Center on small screens */
+            
+            
+            
+          }
+        
+          nav ul {
+            flex-direction: column;
+            max-width: 100%; /* Full width */
+           /* margin-right: 1.4em; /* Padding to align nav items with logo */
+            justify-content: center;
+            background-color: #1a1a2e2b;
+            text-align: center;
+            padding-left: 0;
+            
+          }
+        
+          nav li {
+            padding: 1 0;
+            text-align: center;
+            font-size: 1em;
+          }
+          nav{
+            padding-bottom: 2em;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            
+          }
+          .intro h1{
+            margin: 0px;
+            padding-top: 20px;
+          }
+
+          p.intro{
+            font-size: 1em;
+          }
+
+          H1[Title]{
+            padding-top: 10px;
+          }
+          
+        }
